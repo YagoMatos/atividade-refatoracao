@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Modals</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+	<style>
+		/* Modify */
+		.modal-group{
+    		padding: 4em;
+    		margin-top: 8em;
+    		border-radius: 2rem;
+		}
+
+		.modal-group .btn{
+			margin-top: 0.5rem
+		}
+
+		.modal-tema .icon-modal{
+			align-self: center;
+			display: flex;
+		}
+		.modal-tema .modal-body,
+		.modal-tema .modal-footer{
+			align-self: center;
+		}
+
+		.btn-modal.btn-primary,
+		.btn-modal.btn-secondary{
+			border-radius:0;
+		}
+
+		.modal-tema .text-msg{
+			font-size: 1.4rem
+		}
+
+		.modal-tema .modal-footer {
+    		margin-top: -1em;
+		}
+
+		/* Style*/
+		body{
+			background-color: #031c42;
+		}
+
+		.title{
+			color:#031c42;
+		}
+
+		.modal-group{
+			background-color: #fff;
+		}
+
+		.modal-tema .close{
+			color: #fff;
+			opacity: 1;
+		}
+		
+			/*
+			/ Success init */
+			.modal-tema.modal-success .modal-header{
+				background-color:#27ae60;
+			}
+
+			.modal-tema.modal-success .text-color{
+				color:#27ae60;
+			}
+
+			.modal-tema.modal-success .text-msg{
+				color: #8f9192;
+			}
+
+			.modal-tema.modal-success .modal-footer {
+	    		border-top: none;
+			}
+
+			.btn-modal-success.btn-primary,
+			.btn-modal-success.btn-secondary{
+				background-color:#fff;
+				color:#27ae60;
+				border-color:#27ae60;	
+			}
+
+			/* Success end*/
+			/*
+
+			/* Danger init*/
+			
+			.modal-tema.modal-danger .modal-header{
+				background-color:#c0392b;
+			}
+
+			.modal-tema.modal-danger .text-color{
+				color:#c0392b;
+			}
+
+			.modal-tema.modal-danger .text-msg{
+				color: #8f9192;
+			}
+
+			.modal-tema.modal-danger .modal-footer {
+	    		border-top: none;
+			}
+
+			.btn-modal-danger.btn-primary,
+			.btn-modal-danger.btn-secondary{
+				background-color:#fff;
+				color:#c0392b;
+				border-color:#c0392b;	
+			}
+
+			/* Danger end*/
+			/*
+
+			/* Warning init*/
+
+			.modal-tema.modal-warning .modal-header{
+				background-color:#f39c12;
+			}
+
+			.modal-tema.modal-warning .text-color{
+				color:#f39c12;
+			}
+
+			.modal-tema.modal-warning .text-msg{
+				color: #8f9192;
+			}
+
+			.modal-tema.modal-warning .modal-footer {
+	    		border-top: none;
+			}
+
+			.btn-modal-warning.btn-primary,
+			.btn-modal-warning.btn-secondary{
+				background-color:#fff;
+				color:#f39c12;
+				border-color:#f39c12;	
+			}
+
+			/* Warning end*/
+
+			/* info init*/
+			/**/
+			.modal-tema.modal-info .modal-header{
+				background-color:#3498db;
+			}
+
+			.modal-tema.modal-info .text-color{
+				color:#3498db;
+			}
+
+			.modal-tema.modal-info .text-msg{
+				color: #8f9192;
+			}
+
+			.modal-tema.modal-info .modal-footer {
+	    		border-top: none;
+			}
+
+			.btn-modal-info.btn-primary,
+			.btn-modal-info.btn-secondary{
+				background-color:#fff;
+				color:#3498db;
+				border-color:#3498db;	
+			}
+
+			/* info end*/
+			
+			/* primary init*/
+			/**/
+			.modal-tema.modal-primary .modal-header{
+				background-color:#2980b9;
+			}
+
+			.modal-tema.modal-primary .text-color{
+				color:#2980b9;
+			}
+
+			.modal-tema.modal-primary .text-msg{
+				color: #8f9192;
+			}
+
+			.modal-tema.modal-primary .modal-footer {
+	    		border-top: none;
+			}
+
+			.btn-modal-primary.btn-primary,
+			.btn-modal-primary.btn-secondary{
+				background-color:#fff;
+				color:#2980b9;
+				border-color:#2980b9;	
+			}
+			/* primary end*/
+	</style>
+</head>
+<body>
+
+<div class="container d-flex align-self-center justify-content-center">
+	<div class="row">
+		<div class="col-12">
+			<div class="modal-group">
+				<h1 class="title text-center">Modals</h1>
+
+				<div class="row justify-content-center">
+					<div class="col-12">
+							<div class="d-flex flex-column">
+								<!-- Button trigger modal -->
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#success">
+									success
+								</button>
+
+								<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#danger">
+									danger
+								</button>
+
+								<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#warning">
+									warning
+								</button>
+
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#primary">
+									primary
+								</button>
+
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#info">
+									Info
+								</button>
+							</div> 
+						</div><!--col-12-->
+					</div><!--row-->	
+				</div><!---modal-group-->
+			</div><!--col-12-->
+	</div><!--row->
+	
+		<!-- Modal Success-->
+		<div class="modal modal-tema modal-success fade" id="success" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			 <div class="modal-dialog" role="document">
+			   <div class="modal-content">
+			     <div class="modal-header">
+				    <i class="fa fa-check-circle fa-inverse fa-4x float-center" aria-hidden="true"></i>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+					</button>
+			    </div>
+			     <div class="modal-body">
+			        <h2 class="text-center text-color">Great!</h2>
+			        <p class="text-msg">Your data as been successfully saved.</p>
+			     </div>
+			     <div class="modal-footer">
+			       <button type="button" class="btn btn-modal-success btn-secondary" data-dismiss="modal">Back to my work</button>
+			       <button type="button" class="btn btn-modal-success btn-primary">Back to store hours</button>
+			     </div>
+			   </div>
+			 </div>
+		</div>
+		<!-- Modal Success-->
+
+		<!-- Modal Danger-->
+		<div class="modal modal-tema modal-danger fade" id="danger" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			 <div class="modal-dialog" role="document">
+			   <div class="modal-content">
+			     <div class="modal-header">
+					<i class="fa fa-times-circle fa-inverse fa-4x" aria-hidden="true"></i>
+				    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				        <span aria-hidden="true">&times;</span>
+				    </button>   
+			     </div>
+			     <div class="modal-body">
+			        <h2 class="text-center text-color">Sorry!</h2>
+			        <p class="text-msg">You don't have permission to access.</p>
+			     </div>
+			     <div class="modal-footer">
+			       <button type="button" class="btn btn-modal-danger btn-secondary" data-dismiss="modal">Back to my work</button>
+			       <button type="button" class="btn btn-modal-danger btn-primary">Back to store hours</button>
+			     </div>
+			   </div>
+			 </div>
+		</div>
+		<!-- Modal Danger-->
+
+		<!-- Modal Warning-->
+		<div class="modal modal-tema modal-warning fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			 <div class="modal-dialog" role="infot">
+			   <div class="modal-content">
+				     <div class="modal-header">
+				     	<i class="fa fa-exclamation-triangle fa-inverse fa-4x" aria-hidden="true"></i>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						    <span aria-hidden="true">&times;</span>
+						</button>
+				     </div>
+				     <div class="modal-body">
+				        <h2 class="text-center text-color">Are you sure?</h2>
+				        <p class="text-msg">Are you sure that you want to delete?</p>
+				     </div>
+				     <div class="modal-footer">
+				       <button type="button" class="btn btn-modal-warning btn-secondary" data-dismiss="modal">Yes, I delete it!</button>
+				       <button type="button" class="btn btn-modal-warning btn-primary">Cancel</button>
+				     </div>
+			    </div>
+			 </div>
+		</div>
+		<!-- Modal Warning-->
+		
+		<!-- Modal info-->
+		<div class="modal modal-tema modal-info fade" id="info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			 <div class="modal-dialog" role="infot">
+			   <div class="modal-content">
+				     <div class="modal-header">
+				     	<i class="fa fa-info-circle fa-inverse fa-4x" aria-hidden="true"></i>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						    <span aria-hidden="true">&times;</span>
+						 </button>
+				     </div>
+				     <div class="modal-body">
+				        <h2 class="text-center text-color">Hey!</h2>
+				        <p class="text-msg">This is new upgrade!</p>
+				     </div>
+				     <div class="modal-footer">
+				        <button type="button" class="btn btn-modal-info btn-primary">Back to my work</button>
+				       	<button type="button" class="btn btn-modal-info btn-primary">Back to store hours</button>
+				     </div>
+			    </div>
+			 </div>
+		</div>
+		<!-- Modal info-->
+
+		<!-- Modal primary-->
+		<div class="modal modal-tema modal-primary fade" id="primary" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			 <div class="modal-dialog" role="infot">
+			   <div class="modal-content">
+			     <div class="modal-header">
+			     	<i class="fa fa-envelope fa-inverse fa-4x" aria-hidden="true"></i>
+			     	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+					</button>
+			     </div>
+				     <div class="modal-body">
+				        <h2 class="text-center text-color">New Message</h2>
+				        <p class="text-msg">Check you inbox!</p>
+				     </div>
+				     <div class="modal-footer">
+				        <button type="button" class="btn btn-modal-primary btn-primary">Back to my work</button>
+				       <button type="button" class="btn btn-modal-primary btn-primary">Go to inbox</button>
+				     </div>
+			    </div>
+			 </div>
+		</div>
+		<!-- Modal primary-->
+	
+</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/tether.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
